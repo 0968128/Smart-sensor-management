@@ -4,9 +4,7 @@ class Light {
   int _neoPixel;
   
   public:
-    Light(int neoPixel) {
-      _neoPixel = neoPixel;
-    }
+    Light(int neoPixel);
     
     void turnOn(int colorCode[]);
 

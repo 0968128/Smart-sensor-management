@@ -1,9 +1,11 @@
 #include <Adafruit_CircuitPlayground.h>
 #include "Light.h"
+#include "Button1.h"
 
 bool leftButtonPressed, rightButtonPressed;
 int neoPixel = 0;
 Light* light = new Light(neoPixel);
+Button1* button_1 = new Button1();
 
 void setup() {
   // put your setup code here, to run once:
@@ -21,7 +23,7 @@ void loop() {
   leftButtonPressed = CircuitPlayground.leftButton();
   rightButtonPressed = CircuitPlayground.rightButton();
 
-  if(leftButtonPressed) {
+  if(button_1->retrieveSensorData()) {
     light->turnOn(colorCode);
   } else if(rightButtonPressed) {
     light->turnOff();
