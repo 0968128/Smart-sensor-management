@@ -6,7 +6,7 @@
 bool rightButtonPressed;
 int neoPixel = 0;
 Light* light = new Light(neoPixel);
-Button1* button_1 = new Button1();
+DigitalSensor* button_1 = new Button1();
 LightSensor* lightSensor = new LightSensor();
 
 void setup() {
