@@ -2,9 +2,6 @@
 #include "DigitalSensor.h"
 
 class Button1 : public DigitalSensor {
-  private:
-    bool _digitalSensorValue;
-  
   public:
     Button1();
     
