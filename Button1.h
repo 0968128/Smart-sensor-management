@@ -1,7 +1,8 @@
 #include <Adafruit_CircuitPlayground.h>
 
 class Button1 {
-  bool _sensorValue;
+  private:
+    bool _buttonSensorValue;
   
   public:
     Button1();
