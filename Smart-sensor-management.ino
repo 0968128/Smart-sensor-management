@@ -1,12 +1,14 @@
 #include <Adafruit_CircuitPlayground.h>
 #include "Light.h"
 #include "Button1.h"
+#include "Button2.h"
 #include "LightSensor.h"
 
 bool rightButtonPressed;
 int neoPixel = 0;
 Light* light = new Light(neoPixel);
 DigitalSensor* button_1 = new Button1();
+DigitalSensor* button_2 = new Button2();
 LightSensor* lightSensor = new LightSensor();
 
 void setup() {
@@ -19,11 +21,9 @@ void loop() {
   // put your main code here, to run repeatedly:  
   int colorCode[] = {255, lightSensor->retrieveSensorData(), lightSensor->retrieveSensorData()};
 
-  rightButtonPressed = CircuitPlayground.rightButton();
-
   if(button_1->retrieveSensorData()) {
     light->turnOn(colorCode);
-  } else if(rightButtonPressed) {
+  } else if(button_2->retrieveSensorData()) {
     light->turnOff();
   }
 }
