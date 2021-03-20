@@ -1,11 +1,11 @@
 #include <Adafruit_CircuitPlayground.h>
 #include "Button1.h"
 
-bool _buttonSensorValue;
+bool _digitalSensorValue;
 
 Button1::Button1() {}
 
 bool Button1::retrieveSensorData() {
-  _buttonSensorValue = CircuitPlayground.leftButton();
-  return _buttonSensorValue;
+  _digitalSensorValue = CircuitPlayground.leftButton();
+  return _digitalSensorValue;
 }

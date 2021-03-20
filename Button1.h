@@ -2,7 +2,7 @@
 
 class Button1 {
   private:
-    bool _buttonSensorValue;
+    bool _digitalSensorValue;
   
   public:
     Button1();

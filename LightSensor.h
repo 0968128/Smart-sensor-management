@@ -2,7 +2,7 @@
 
 class LightSensor {
   private:
-    int _lightSensorValue, _parsedData;
+    int _analogSensorValue, _parsedData;
   
   public:
     LightSensor();
