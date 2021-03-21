@@ -10,3 +10,7 @@ int LightSensor::retrieveSensorData() {
   _parsedData = _analogSensorValue * 0.24926686217;
   return _parsedData;
 }
+
+//int LightSensor::parseSensorData() {
+//  return 0;
+//}

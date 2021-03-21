@@ -1,6 +1,7 @@
 #include <Adafruit_CircuitPlayground.h>
+#include "AnalogSensor.h"
 
-class LightSensor {
+class LightSensor : public AnalogSensor {
   private:
     int _analogSensorValue, _parsedData;
   
@@ -8,4 +9,5 @@ class LightSensor {
     LightSensor();
     
     int retrieveSensorData();
+//    int parseSensorData();
 };
