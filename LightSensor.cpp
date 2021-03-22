@@ -1,16 +1,16 @@
 #include <Adafruit_CircuitPlayground.h>
 #include "LightSensor.h"
 
-int _analogSensorValue, _parsedData;
-
 LightSensor::LightSensor() {};
 
-int LightSensor::retrieveSensorData() {
+float LightSensor::retrieveSensorData() {
   _analogSensorValue = CircuitPlayground.lightSensor();
-  _parsedData = _analogSensorValue * 0.24926686217;
-  return _parsedData;
+  _parsedValue = LightSensor::parseSensorData(_analogSensorValue);
+  return _parsedValue;
 }
 
-//int LightSensor::parseSensorData() {
-//  return 0;
-//}
+float LightSensor::parseSensorData(float analogData) {
+  float parsedData = analogData * 0.24926686217;
+  Serial.println(parsedData);
+  return parsedData;
+}

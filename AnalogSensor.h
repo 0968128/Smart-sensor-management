@@ -4,9 +4,10 @@
 
 class AnalogSensor {
   public:
-    bool _analogSensorValue;
-    virtual int retrieveSensorData();
-//    virtual int parseSensorData();
+    float _analogSensorValue;
+    float _parsedValue;
+    virtual float retrieveSensorData();
+    virtual float parseSensorData(float analogData);
 };
 
 #endif
