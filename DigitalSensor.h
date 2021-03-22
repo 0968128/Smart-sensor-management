@@ -3,8 +3,9 @@
 #include <Adafruit_CircuitPlayground.h>
 
 class DigitalSensor {
-  public:
+  protected:
     bool _digitalSensorValue;
+  public:
     virtual bool retrieveSensorData();
 };
 

@@ -1,10 +1,10 @@
 #include <Adafruit_CircuitPlayground.h>
 #include "AnalogSensor.h"
 
-class TemperatureSensor : public AnalogSensor {  
+class TemperatureSensor : public AnalogSensor {
+  protected:
+    float parseSensorData(float analogData);
   public:
     TemperatureSensor();
-    
     float retrieveSensorData();
-    float parseSensorData(float analogData);
 };

@@ -11,6 +11,5 @@ float LightSensor::retrieveSensorData() {
 
 float LightSensor::parseSensorData(float analogData) {
   float parsedData = analogData * 0.24926686217;
-  Serial.println(parsedData);
   return parsedData;
 }

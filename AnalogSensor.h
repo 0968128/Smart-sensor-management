@@ -3,11 +3,11 @@
 #include <Adafruit_CircuitPlayground.h>
 
 class AnalogSensor {
-  public:
-    float _analogSensorValue;
-    float _parsedValue;
-    virtual float retrieveSensorData();
+  protected:
+    float _parsedValue, _analogSensorValue;
     virtual float parseSensorData(float analogData);
+  public:
+    virtual float retrieveSensorData();
 };
 
 #endif
