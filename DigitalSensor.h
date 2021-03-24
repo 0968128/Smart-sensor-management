@@ -4,9 +4,9 @@
 
 class DigitalSensor {
   protected:
-    bool _digitalSensorValue;
+    bool _digitalSensorValue = 0;
   public:
-    virtual bool retrieveSensorData();
+    virtual bool retrieveSensorData() = 0;
 };
 
 #endif
