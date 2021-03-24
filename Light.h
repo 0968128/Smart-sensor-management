@@ -1,5 +1,3 @@
-#include <Adafruit_CircuitPlayground.h>
-
 class Light {
   private:
     int _neoPixel;
